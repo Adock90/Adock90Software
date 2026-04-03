@@ -23,43 +23,85 @@
         <div class="info_content">
             <div class="info-title">
                 <h2>Software Created by me adock90.</h2>
+                <h3 id="UserStats"></h3>
             </div>
         </div>
     </div>
-    <div class="products">
-        <div class="products_content">
-            <div class="products-title">
-                <h3>PEADetective</h3>
+    <div class="products-container">
+        <div class="products">
+            <div class="products_content">
+                <div class="products-title">
+                    <h3>PEADetective</h3>
+                </div>
+                <div class="products-desc">
+                    <p>
+                        A Small PE Application (PEA) File Header Inspector. Only on Windows 
+                    </p>
+                </div>
+                <div>
+                    <button class="products-button" onclick="window.location.href = './products/PEADetective.html'">
+                        View
+                    </button>
+                </div>
             </div>
-            <div class="products-desc">
-                <text>
-                    A Small PE Application (PEA) File Header Inspector. Only on Windows 
-                </text>
+        </div>
+        <div class="products">
+            <div class="products_content">
+                <div class="products-title">
+                    <h3>ELFDetective</h3>
+                </div>
+                <div class="products-desc">
+                    <p>
+                        A Small ELF File Viewer written in C. Only on Linux 
+                    </p>
+                </div>
+                <div>
+                    <button class="products-button" onclick="window.location.href = './products/ELFDetective.html'">
+                        View
+                    </button>
+                </div>
             </div>
-            <div>
-                <button class="products-button" onclick="window.location.href = './products/PEADetective.html'">
-                    Download
-                </button>
+        </div>
+        <div class="products">
+            <div class="products_content">
+                <div class="products-title">
+                    <h3>GassinRT</h3>
+                </div>
+                <div class="products-desc">
+                    <p>
+                        A lightweight JS runtime for linux that can do system level tasks through JavaScript 
+                    </p>
+                </div>
+                <div>
+                    <button class="products-button" onclick="window.location.href = './products/GassinRT.html'">
+                        View
+                    </button>
+                </div>
             </div>
         </div>
     </div>
-    <div class="products" style="float: left;">
-        <div class="products_content">
-            <div class="products-title">
-                <h3>ELFDetective</h3>
-            </div>
-            <div class="products-desc">
-                <text>
-                    A Small ELF File Viewer written in C. Only on Linux 
-                </text>
-            </div>
-            <div>
-                <button class="products-button" onclick="window.location.href = './products/ELFDetective.html'">
-                    Download
-                </button>
-            </div>
-        </div>
-    </div>
-    
+    <script src="./UserChecks.js"></script>
+    <script>
+        let AmountOfVisits = GetUserVisits();
+        let AmountOfDownloads = GetUserDownloads();
+        let LastVisit = TranslateLVLSToLVI(GetLastVisit());
+        let CurrentTime = GetTime();
+        if (CurrentTime - LastVisit < 100){
+            window.location.href = "./Woah.html";
+        }
+        
+        if (AmountOfDownloads === null){
+            AmountOfDownloads = 0;
+        }
+        SetLastVisit();
+        SetUserVisits(AmountOfVisits);
+
+        if (AmountOfVisits === NaN){
+            AmountOfVisits = 0;
+        }
+
+        let UserStats = document.getElementById("UserStats");
+        UserStats.innerHTML = "You have visited us: "+AmountOfVisits+" times and downloaded software "+AmountOfDownloads+" times";
+    </script>
 </body>
 </html>

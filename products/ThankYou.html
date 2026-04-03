@@ -19,5 +19,18 @@
         </h3>
     </div>
     <script src="./ThankYou.js"></script>
+    <script src="../UserChecks.js"></script>
+    <script>
+        let UserDownloads = GetUserDownloads();
+        if (UserDownloads === null || UserDownloads === NaN || UserDownloads === undefined){
+            console.log("jj");
+            SetUserDownload(1);
+        } else {
+            console.log("jjjj");
+            console.log(UserDownloads);
+            UserDownloads++;
+            SetUserDownload(UserDownloads.toLocaleString());
+        }
+    </script>
 </body>
 </html>
