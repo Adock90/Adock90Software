@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>winrecopy</title>
+    <title>linrecopy</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../style.css" rel="stylesheet">
     <link href="../media/linrecopy.png" rel="icon">
 </head>
 <body>
     <p hidden id="link">https://github.com/Adock90/linrecopy/releases/download/linrecopy1.0.0/install.sh</p>
+    <div id="home">
+        <button class="products-button" style="vertical-align: middle;">Home</button>
+    </div>
     <div class="title">
         <div class="title-logo">
             <img src="../media/linrecopy.png" alt="logo" width="70px" height="70px">
@@ -26,6 +29,16 @@
         <button class="products-button" style="vertical-align: middle;" onclick="window.open('https://github.com/Adock90/linrecopy');">Source Code</button>
         <button id="Download" class="products-button" style="vertical-align: middle;">Download</button>
     </div>
+    <div class="description">
+        <h1>For Windows users visit winrecopy</h1>
+        <button class="products-button" onclick="window.open('./winrecopy.html')">Visit</button>
+    </div>
+    <div class="description" style="margin-top: 10px;">
+        <img src="../media/linrecopyimg.png" width="1000" height="562.5" style="border-radius: 25px;">
+    </div>
     <script src="./Download.js"></script>
+    <script src="../UserChecks.js"></script>
+    <script src="../checkScript.js"></script>
+    <script src="../home.js"></script>
 </body>
 </html>

@@ -15,6 +15,7 @@ function SetUserDownload(amount){
 function GetUserVisits(){
     let ReturnInteger;
     let NumOfVisits = localStorage.getItem("Adock90Visits");
+    console.log(NumOfVisits);
     if (NumOfVisits === "NaN" || NumOfVisits === null || NumOfVisits === NaN || NumOfVisits === undefined || NumOfVisits === "undefined"){
         ReturnInteger = 0;
         NumOfVisits = 0;
@@ -29,6 +30,7 @@ function GetUserVisits(){
 
 function SetUserVisits(num){
     let UserVal = num;
+    console.log(UserVal);
     if (UserVal === null || UserVal === 'NaN' || UserVal === NaN || UserVal === undefined || UserVal === "undefined"){
         localStorage.setItem("Adock90Visits", 1);
     } else {

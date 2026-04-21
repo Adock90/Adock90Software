@@ -32,6 +32,8 @@ body{
 }
 
 .products{
+    display: flex;
+    flex-wrap: wrap;
     animation: ProductsSlideIn 1s ease-out;
     position: relative;
     left: 2%;
@@ -39,6 +41,7 @@ body{
     width: 200px;
     box-shadow: 0 0 25px 0px rgb(165, 165, 165);
     border-radius: 25px;
+    background-color: white;
 }
 
 .products_content{
@@ -66,6 +69,7 @@ body{
 }
 
 .description{
+    background-color: white;
     animation: ProductsSlideIn 1s ease-out;
     position: relative;
     left: 2%;
@@ -74,6 +78,7 @@ body{
     box-shadow: 0 0 25px 0px rgb(165, 165, 165);
     border-radius: 25px;
 }
+
 @keyframes WelcomeSlideIn {
     from {
         transform: translateY(-100%);
@@ -104,5 +109,11 @@ body{
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    body{
+        background-color: rgb(41, 41, 41);
     }
 }
