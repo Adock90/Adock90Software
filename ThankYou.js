@@ -22,6 +22,6 @@ function LocateBack() {
     
 }
 
-MatchTheme();
+window.addEventListener("load", MatchTheme());
 
 setInterval(LocateBack, 1000);
