@@ -7,6 +7,7 @@ function MatchTheme(){
         textcolourfirsttitle.style.color = 'white';
         textcoloursecondtitle.style.color = 'white';
     }
+
 }
 
 function LocateBack() {
@@ -20,7 +21,6 @@ function LocateBack() {
     }
     
 }
-
 
 window.addEventListener("load", MatchTheme());
 
