@@ -108,6 +108,13 @@ body{
     text-align: right;
 }
 
+#home{
+    position: fixed;
+    bottom: 0;
+    padding-left: 20px;
+    width: 100%;
+}
+
 @keyframes WelcomeSlideIn {
     from {
         transform: translateY(-100%);
