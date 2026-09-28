@@ -69,7 +69,7 @@ body{
 }
 
 .description{
-    background-color: white;
+    background-color: grey;
     animation: ProductsSlideIn 1s ease-out;
     position: relative;
     left: 0%;
