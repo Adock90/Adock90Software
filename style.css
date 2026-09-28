@@ -101,7 +101,7 @@ body{
 .websitesource-container{
     position: fixed;
     bottom: 0%;
-    right: 30px;
+    padding-left: 30%;
     width: 100%;
 }
 
